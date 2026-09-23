@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ديرتي | رحلة في السعودية</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="logo">ديرتي</div>
+
+        <div class="nav-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#regions">المناطق</a>
+            <a href="#challenge">التحدي</a>
+            <a href="#bag">حقيبتي</a>
+        </div>
+    </nav>
+
+
+    <!-- الصفحة الرئيسية -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">رحلتك تبدأ من هنا</span>
+
+            <h1>اكتشف<br>السعودية</h1>
+
+            <p>
+                رحلة افتراضية تأخذك بين مناطق المملكة،
+                وتعرّفك على قصصها وكلماتها وأماكنها بطريقة مختلفة.
+            </p>
+
+            <button onclick="startJourney()">
+                ابدأ الرحلة
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- المناطق -->
+    <section id="regions" class="section">
+
+        <div class="section-title">
+            <span>اكتشف</span>
+            <h2>مناطق المملكة</h2>
+            <p>اختر وجهتك وابدأ الاستكشاف</p>
+        </div>
+
+
+        <div class="regions-container">
+
+            <div class="region-card">
+                <div class="region-number">01</div>
+
+                <h3>منطقة مكة</h3>
+
+                <p>
+                    مدن تاريخية وثقافة متنوعة
+                    وحكايات من قلب الحجاز.
+                </p>
+
+                <button onclick="chooseRegion('مكة')">
+                    استكشف
+                </button>
+            </div>
+
+
+            <div class="region-card">
+                <div class="region-number">02</div>
+
+                <h3>منطقة الباحة</h3>
+
+                <p>
+                    جبال وغابات وأجواء مختلفة
+                    في جنوب غرب المملكة.
+                </p>
+
+                <button onclick="chooseRegion('الباحة')">
+                    استكشف
+                </button>
+            </div>
+
+
+            <div class="region-card">
+                <div class="region-number">03</div>
+
+                <h3>منطقة الرياض</h3>
+
+                <p>
+                    قلب المملكة ومزيج بين
+                    التاريخ والحياة الحديثة.
+                </p>
+
+                <button onclick="chooseRegion('الرياض')">
+                    استكشف
+                </button>
+            </div>
+
+
+            <div class="region-card">
+                <div class="region-number">04</div>
+
+                <h3>منطقة عسير</h3>
+
+                <p>
+                    طبيعة جبلية وتراث وثقافة
+                    جنوبية مميزة.
+                </p>
+
+                <button onclick="chooseRegion('عسير')">
+                    استكشف
+                </button>
+            </div>
+
+
+            <div class="region-card">
+                <div class="region-number">05</div>
+
+                <h3>منطقة الشرقية</h3>
+
+                <p>
+                    ساحل الخليج وثقافة متنوعة
+                    ومدن نابضة بالحياة.
+                </p>
+
+                <button onclick="chooseRegion('الشرقية')">
+                    استكشف
+                </button>
+            </div>
+
+
+            <div class="region-card">
+                <div class="region-number">06</div>
+
+                <h3>منطقة تبوك</h3>
+
+                <p>
+                    طبيعة مختلفة ومواقع
+                    تاريخية ومناظر مميزة.
+                </p>
+
+                <button onclick="chooseRegion('تبوك')">
+                    استكشف
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- التحدي -->
+    <section id="challenge" class="challenge-section">
+
+        <div class="challenge-box">
+
+            <span>تحدي ديرة</span>
+
+            <h2>هل تعرف معنى الكلمة؟</h2>
+
+            <p class="word">
+                وش معنى كلمة "وشوله"؟
+            </p>
+
+            <div class="answers">
+
+                <button onclick="checkAnswer(false)">
+                    لماذا؟
+                </button>
+
+                <button onclick="checkAnswer(true)">
+                    لماذا / ليش؟
+                </button>
+
+                <button onclick="checkAnswer(false)">
+                    أين؟
+                </button>
+
+            </div>
+
+            <p id="result"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- الحقيبة -->
+    <section id="bag" class="section bag-section">
+
+        <div class="section-title">
+
+            <span>رحلتك</span>
+
+            <h2>حقيبتي</h2>
+
+            <p>
+                الأشياء التي جمعتها خلال رحلتك
+            </p>
+
+        </div>
+
+
+        <div class="bag">
+
+            <div class="bag-item">
+                <div class="icon">✦</div>
+                <h3>جواز ديرة</h3>
+                <p>جاهز للرحلة</p>
+            </div>
+
+            <div class="bag-item locked">
+                <div class="icon">?</div>
+                <h3>سر مجهول</h3>
+                <p>افتح المناطق لاكتشافه</p>
+            </div>
+
+            <div class="bag-item locked">
+                <div class="icon">?</div>
+                <h3>قطعة نادرة</h3>
+                <p>لم يتم اكتشافها</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- النهاية -->
+    <footer>
+
+        <h2>ديرة</h2>
+
+        <p>
+            رحلتك في السعودية لم تنتهِ بعد.
+        </p>
+
+        <button onclick="goHome()">
+            العودة للبداية
+        </button>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
